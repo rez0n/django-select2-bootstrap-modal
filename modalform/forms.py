@@ -10,6 +10,12 @@ class CategoryPickWidget(s2forms.ModelSelect2Widget):
 
 
 class PostCategoryForm(BSModalModelForm):
+    class Media:
+        js = [
+            'select2.min.js'
+        ]
+
+
     class Meta:
         model = Post
         fields = ['category',]
